@@ -16,7 +16,7 @@ const app  = express();
 const port = 8080; //443 if we want to use https
 
 app.use(cors({
-  'origin': "https://zesty-valkyrie-6ef5bb.netlify.app/"
+  'origin': "https://zesty-valkyrie-6ef5bb.netlify.app"
 }));
 app.use(express.json());
 app.use(express.urlencoded({
