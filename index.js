@@ -16,7 +16,7 @@ const app  = express();
 const port = 8080; //443 if we want to use https
 
 app.use(cors({
-  'origin': "http://localhost:3000"
+  'origin': "https://zesty-valkyrie-6ef5bb.netlify.app/"
 }));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -90,7 +90,7 @@ app.post('/single_student', (req, res) => {
     classXIISchool: req.body.class_xii_school,
     interests: req.body.interests,
   }).then(() => {
-    res.location('http://localhost:3000/student/' + student_id);
+    res.location('https://zesty-valkyrie-6ef5bb.netlify.app/student/' + student_id);
     res.send(302);
   });
   // console.log(req.body);
@@ -123,6 +123,6 @@ app.post('/admission', (req, res) => {
   });
   newStudent.save();
   
-  res.location('http://localhost:3000/admission/success');
+  res.location('https://zesty-valkyrie-6ef5bb.netlify.app/admission/success');
   res.send(302);
 });
